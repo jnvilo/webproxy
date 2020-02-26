@@ -1,8 +1,10 @@
 FROM centos:7
 MAINTAINER Jason Viloria <jnvilo@gmail.com>
-RUN yum -y install epel-release && yum -y install nginx 
+RUN yum -y install epel-release && yum -y install yum-utls && yum -y install nginx certbot python2-certbot-nginx
 
-
-EXPOSE 80
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY nginx/ssl /etc/nginx/ssl
+COPY nginx/conf.d /etc/nginx/conf.d
+EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
 

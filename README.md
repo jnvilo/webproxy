@@ -18,31 +18,9 @@ frontend:
   restart: always
   volumes:
     - frontend_letsencrypt:/etc/letsencrypt
-    - frontend_nginx_etc_conf_d:/etc/nginx/conf.d                                                       
+    - frontend_nginx_etc_conf_d:/etc/nginx/conf.d                                                   
 ```
 
-
-
-
-
-
-## build
-
- ```
- docker build -t jnvilo/webproxy .
- ```
- 
- ## Run 
- 
- ```
- docker run -p 80:80 -it webproxy
- ```
- 
- ## debug
- 
- ```
- docker exec -it <CONTAINER ID> /bin/bash
- ```
 
 
 ### notes:

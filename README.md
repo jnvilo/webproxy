@@ -19,4 +19,8 @@ Dockerfile to build a centos 7 base image. Contains certbot
  ```
  docker exec -it <CONTAINER ID> /bin/bash
  ```
- 
+
+
+### notes:
+
+certbot --nginx --renew-by-default   --redirect --staging -m jnvilo@gmail.com --agree-tos --eff-email -d harbor.lnxsystems.com 

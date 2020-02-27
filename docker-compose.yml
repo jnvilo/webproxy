@@ -1,0 +1,11 @@
+webproxy:
+  build: .
+  ports:
+    - "80:80"
+    - "443:443"
+  restart: always
+  volumes: 
+    - webproxy_letsencrypt:/etc/letsencrypt
+    - webproxy_nginx_etc_conf_d:/etc/conf.d
+
+

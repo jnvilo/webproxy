@@ -28,7 +28,7 @@ node {
          * First, the incremental build number from Jenkins
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
-        docker.withRegistry('https://harbor.lnxsystems.com', 'harbor-admin-password') {
+        docker.withRegistry('https://harbor.lnxsystems.com', 'jnvilo-harbor-creds') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }

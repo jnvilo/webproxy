@@ -1,6 +1,6 @@
 # webproxy
 
-Dockerfile to build a centos 7 base image. Contains certbot. This image is used as a base image for deploying a frontend nginx with automated certbot https configuration. 
+Dockerfile to build nginx on centos:7 base image. Contains certbot. This image is used as a base image for deploying a frontend nginx with automated certbot https configuration. 
 
 
 ## How to use the docker image.

@@ -2,6 +2,17 @@
 
 Dockerfile to build nginx on centos:7 base image. Contains certbot. This image is used as a base image for deploying a frontend nginx with automated certbot https configuration. 
 
+## Manualy build the image
+**This should not be needed since builds.lnxsystems.com should be the one building it** 
+
+This docker image is used by many other projects and requires to be present as harbor.lnxsystems.com/jnvilo/webproxy. 
+
+```
+docker build -t harbor.lnxsystems.com/jnvilo/webproxy:latest .
+docker login harbor.lnxsystems.com
+docker push harbor.lnxsystems.com/jnvilo/webproxy:latest
+```
+
 
 ## How to use the docker image.
 
